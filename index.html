@@ -25,16 +25,138 @@
 
     </header>
     <main>
-      <h2>Welcome to Recipe Finder 🍳</h2>
-      <p>Search, save, and explore delicious recipes from around the world.</p>
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="Search for recipes..." required />
-        <button type="submit">🍳</button>
-      </form>
-      <section id="intro-cards" class="card-grid">
-        <!-- Cards will be injected here -->
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-tag">GOOD FOOD. GOOD MOOD. ✨</span>
+
+          <h1>
+            Find your next
+            <span>favorite meal.</span>
+          </h1>
+
+          <p>
+            Craving something delicious? Discover recipes, explore new flavors,
+            and find inspiration for your next meal. Your kitchen adventure
+            starts here.
+          </p>
+
+          <form id="search-form" class="hero-search">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="What are you craving today?"
+              required
+            />
+            <button type="submit">Find Recipes 🔎</button>
+          </form>
+
+          <div class="hero-highlights">
+            <span>🍳 Easy to explore</span>
+            <span>❤️ Save your favorites</span>
+            <span>🥗 Discover new dishes</span>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="images/hero-food.jpg"
+            alt="A delicious spread of freshly prepared meals"
+          />
+          <div class="hero-image-label">
+            <span>Made for your cravings</span>
+            <p>Discover something delicious.</p>
+          </div>
+        </div>
       </section>
-      <section id="search-cards">
+
+
+      <!-- CATEGORY / DISCOVERY SECTION -->
+      <section class="explore-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-eyebrow">WHAT ARE YOU IN THE MOOD FOR?</p>
+            <h2>Explore your cravings</h2>
+          </div>
+          <p>There is always something delicious waiting to be discovered.</p>
+        </div>
+
+        <div class="category-grid">
+          <a href="#search-form" class="category-card breakfast">
+            <span class="category-icon">🍳</span>
+            <h3>Breakfast</h3>
+            <p>Start your day deliciously.</p>
+          </a>
+
+          <a href="#search-form" class="category-card lunch">
+            <span class="category-icon">🥗</span>
+            <h3>Lunch</h3>
+            <p>Make your midday meal exciting.</p>
+          </a>
+
+          <a href="#search-form" class="category-card dinner">
+            <span class="category-icon">🍝</span>
+            <h3>Dinner</h3>
+            <p>Something satisfying tonight.</p>
+          </a>
+
+          <a href="#search-form" class="category-card dessert">
+            <span class="category-icon">🍰</span>
+            <h3>Desserts</h3>
+            <p>Save room for something sweet.</p>
+          </a>
+        </div>
+      </section>
+
+            <section class="features-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-eyebrow">MORE THAN JUST RECIPES</p>
+            <h2>Your kitchen, your way</h2>
+          </div>
+          <p>Everything you need to find meals, save ideas, and make food exploration easier.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🔎</div>
+            <h3>Find your next favorite</h3>
+            <p>Explore recipes and discover meals that inspire your next cooking adventure.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">❤️</div>
+            <h3>Save what you love</h3>
+            <p>Keep your favorite recipes close so you can return to them whenever you like.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Know what you're eating</h3>
+            <p>Explore nutrition information and get a little more insight into your meals.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- RECIPE INSPIRATION -->
+      <section class="inspiration-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-eyebrow">A LITTLE FOOD INSPIRATION</p>
+            <h2>Discover something delicious</h2>
+          </div>
+          <p>Search for meals, find something new, and let your next dish surprise you.</p>
+        </div>
+
+        <!-- Cards will be injected here -->
+        <section id="intro-cards" class="card-grid"></section>
+      </section>
+
+
+<!-- 
+      <section id="intro-cards" class="card-grid">
+      </section>
+      <section id="search-cards"> -->
         
       </section>
       <section id="results"></section>

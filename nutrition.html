@@ -1,54 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recipe Finder</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <meta name="description" content="Analyze the nutritional content of meals and ingredients with Recipe Finder." />
+  <title>Nutrition Analyzer | Recipe Finder</title>
+
+  <link rel="stylesheet" href="styles/styles.css" />
+
   <script src="js/nutrition.js" type="module"></script>
   <script src="js/navigation.js" type="module"></script>
-
-
 </head>
+
 <body>
   <div class="wrapper">
     <header class="app-header">
-      <a href="index.html">🍳 Recipe Finder</a>
-      <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
+      <a href="index.html" aria-label="Recipe Finder home">
+        🍳 Recipe Finder
+      </a>
+
+      <button
+        id="hamburger"
+        class="hamburger"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
         ☰
       </button>
 
-      <!-- <form id="search-form">
-        <input type="text" id="search-input" placeholder="Search for recipes..." required>
-        <button type="submit">Search</button>
-      </form> -->
-      <nav class="nav-links">
+      <nav class="nav-links" id="main-navigation">
         <a href="favorite.html">❤️ Favorites</a>
-        <a href="nutrition.html">📊 Nutrition</a>
+        <a href="nutrition.html" aria-current="page">📊 Nutrition</a>
       </nav>
-
     </header>
+
     <main>
-      <h2>🍏 Nutrition Analyzer</h2>
-      <section id="nutrition-link">
+      <h1>🍏 Nutrition Analyzer</h1>
+
+      <section id="nutrition-link" aria-labelledby="nutrition-heading">
         <div class="nutrition-intro-card">
-          <p>Enter a meal or list of ingredients (e.g. <em>"2 eggs and toast"</em>) to get a full nutrition breakdown.</p>
+          <h2 id="nutrition-heading">Understand What's in Your Meal</h2>
+
+          <p>
+            Enter a meal or list of ingredients
+            (e.g. <em>"2 eggs and toast"</em>) to get a nutrition breakdown.
+          </p>
+
           <form id="nutrition-form">
-            <input type="text" id="nutrition-input" placeholder="e.g. 1 banana and 1 cup of milk" required />
+            <label for="nutrition-input">Enter your meal or ingredients</label>
+
+            <input
+              type="text"
+              id="nutrition-input"
+              name="ingredients"
+              placeholder="e.g. 1 banana and 1 cup of milk"
+              required
+            />
+
             <button type="submit">Analyze</button>
           </form>
-          <div id="nutrition-results"></div>
+
+          <div
+            id="nutrition-results"
+            aria-live="polite"
+            aria-atomic="true"
+          ></div>
         </div>
       </section>
     </main>
+
     <footer class="app-footer">
       <div class="footer">
         <div class="right">
           <p>WDD330 Class Project</p>
-          <p>Deborah Sarah Okon<br>
-          <p>&copy;<span id="currentYear"> </span> Recipe Finder</p>
-          <p id="lastModified"> </p>
-          <a href="https://youtu.be/XXOVA5GKW0c" target="_blank">View Video</a>
+          <p>Deborah Sarah Okon</p>
+          <p>&copy;<span id="currentYear"></span> Recipe Finder</p>
+          <p id="lastModified"></p>
+          <a
+            href="https://youtu.be/XXOVA5GKW0c"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Video
+          </a>
         </div>
       </div>
     </footer>
